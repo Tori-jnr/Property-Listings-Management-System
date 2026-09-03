@@ -44,11 +44,18 @@ fun main() {
     val monthlyRent = mutableListOf(30000)
     var unitStatus = "Occupied"
 
-
+    println("Property Name: ${propertyNames[0]}")
+    println("Property ID: ${propertyIds[0]}")
+    println("Number of Units: ${numberOfUnits[0]}")
+    println("Number of Tenants: ${currentTenants[0]}")
+    println("Property Address: ${propertyAddresses[0]}")
+    println("Property Status: ${propertyStatuses[0]}")
+    println("Monthly Rent: KES ${monthlyRent[0]}")
+    println("Unit Status: $unitStatus")
 
     //Registration of new property listings
 
-    println(" \n Enter Property name: \n ")
+    println("\nEnter Property name: \n ")
     val newPropertyName = readln()
     println("Enter Property ID:")
     val newPropertyId = readln().toInt()
