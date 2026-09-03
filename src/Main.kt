@@ -6,7 +6,6 @@
 // 189600 - Gitacu Elizabeth
 
 
-
 fun main() {
 
     println("\n---------------------------------------------------")
@@ -14,26 +13,14 @@ fun main() {
     println("-----------------------------------------------------\n")
 
 // Landlord Details
-
     println("Landlord info: \n")
     val landlordName: String = "Linda Chelagat"
     val landlordId = 201
     val landlordPhoneNo = "0767904538"
-    val landlordEmail = "lchelagat@gmail.com"
     val propertyOwned =  "Sunrise Apartments"
-    var profileStatus = "Verified"
 
-
-    println("Landlord Name: $landlordName")
-    println("Landlord Id: $landlordId")
-    println("Phone Number: $landlordPhoneNo")
-    println("Email: $landlordEmail")
-    println("Property Owned: $propertyOwned")
-    println("Profile Status : $profileStatus")
-
-
+    println("Landlord: $landlordName ($landlordPhoneNo) — managing $propertyOwned\n")
     //Property  Details
-
     println("\n Property info: \n")
     val propertyNames = mutableListOf("Sunrise Apartments")
     val propertyIds = mutableListOf (3001)
@@ -54,7 +41,6 @@ fun main() {
     println("Unit Status: $unitStatus")
 
     //Registration of new property listings
-
     println("\nEnter Property name: \n ")
     val newPropertyName = readln()
     println("Enter Property ID:")
@@ -78,11 +64,9 @@ fun main() {
     propertyStatuses.add(newPropertyStatus)
     monthlyRent.add(newPropertyMonthlyRent)
 
-
     println("Is the property available? (yes/no):")
     val availabilityInput = readln()
     val isAvailable: Boolean = availabilityInput.equals("yes", ignoreCase = true)
-
     val availabilityList = mutableListOf(true)
     availabilityList.add(isAvailable)
 
@@ -98,13 +82,9 @@ fun main() {
         println("Available: ${availabilityList[i]}")
     }
 
-
-
-
     println("\n----- Check Property Availability -----")
     println("Enter the Property Name you want to check:")
     val searchName = readln()
-
     val searchIndex = propertyNames.indexOf(searchName)
 
     if (searchIndex == -1) {
@@ -114,49 +94,4 @@ fun main() {
     } else {
         println("$searchName is currently NOT available.")
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
