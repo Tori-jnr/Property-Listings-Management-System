@@ -123,6 +123,23 @@ println(" \n New Property Details: \n")
     println("Monthly Rent: $newPropertyMonthlyRent")
 
 
+    for (i in propertyNames.indices) {
+
+        println("\nProperty ${i + 1}")
+        println("-----------------------------------")
+        println("Property Name: ${propertyNames[i]}")
+        println("Property ID: ${propertyIds[i]}")
+        println("Number of Units: ${numberOfUnits[i]}")
+        println("Number of Tenants: ${currentTenants[i]}")
+        println("Property Address: ${propertyAddresses[i]}")
+        println("Property Status: ${propertyStatuses[i]}")
+        println("Monthly Rent: Ksh ${monthlyRent[i]}")
+    }
+
+
+    // COUNT THE NUMBER OF PROPERTIES
+
+    println("\nTotal Number of Properties: ${propertyNames.size}")
 
 
 
