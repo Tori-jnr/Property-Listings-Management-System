@@ -1,4 +1,4 @@
-// Concept Note :
+// Concept Note :https://docs.google.com/document/d/1-V8BqZSj4NrHNxJqwYgSpkDc-ylf_DxNTDU1wsRzXBI/edit?usp=sharing
 // Group Members:
 // 200159 - Juliet Nyakiamo
 // 175852 - Lumumba Kimberly
@@ -57,7 +57,7 @@ fun main() {
 
 
     //Registration of new property listings
-
+println("\n Register New Property listing:")
     println(" \n Enter Property name: \n ")
     val newPropertyName = readln()
     println("Enter Property ID:")
@@ -73,6 +73,7 @@ fun main() {
     println("Enter Property Monthly Rent:")
     var newPropertyMonthlyRent = readln().toInt()
 
+    //Save newly created listings
     propertyNames.add(newPropertyName)
     propertyIds.add(newPropertyId)
     numberOfUnits.add(newPropertyUnits)
@@ -122,7 +123,7 @@ println(" \n New Property Details: \n")
     println("Property Status: $newPropertyStatus")
     println("Monthly Rent: $newPropertyMonthlyRent")
 
-
+println(" \n Display Listings: \n ")
     for (i in propertyNames.indices) {
 
         println("\nProperty ${i + 1}")
