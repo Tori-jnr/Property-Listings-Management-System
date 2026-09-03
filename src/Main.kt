@@ -123,6 +123,8 @@ println(" \n New Property Details: \n")
     println("Property Status: $newPropertyStatus")
     println("Monthly Rent: $newPropertyMonthlyRent")
 
+    // Display Listings
+
 println(" \n Display Listings: \n ")
     for (i in propertyNames.indices) {
 
