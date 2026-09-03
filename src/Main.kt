@@ -1,4 +1,4 @@
-// Concept Note :
+// Concept Note : https://docs.google.com/document/d/1-V8BqZSj4NrHNxJqwYgSpkDc-ylf_DxNTDU1wsRzXBI/edit?usp=sharing
 // Group Members:
 // 200159 - Juliet Nyakiamo
 // 175852 - Lumumba Kimberly
@@ -42,18 +42,8 @@ fun main() {
     val propertyStatuses = mutableListOf("Verified")
     val currentTenants = mutableListOf(3)
     val monthlyRent = mutableListOf(30000)
-    var unitStatus = "Assigned"
+    var unitStatus = "Occupied"
 
-
-
-    println("Property Name: $propertyNames")
-    println("Property ID: $propertyIds")
-    println("Number of Units : $numberOfUnits")
-    println("Number of Tenants $currentTenants")
-    println("Property Address: $propertyAddresses")
-    println("Property Status: $propertyStatuses")
-    println("Monthly Rent: $monthlyRent")
-    println("Unit Status: $unitStatus")
 
 
     //Registration of new property listings
@@ -62,9 +52,9 @@ fun main() {
     val newPropertyName = readln()
     println("Enter Property ID:")
     val newPropertyId = readln().toInt()
-    println("Enter Number Units:")
+    println("Enter Number of Units:")
     val newPropertyUnits = readln().toInt()
-    println("Enter Number Tenants:")
+    println("Enter Number of Tenants:")
     var numberOfTenants = readln().toInt()
     println("Enter Property Address:")
     val newPropertyAddress = readln()
@@ -89,14 +79,19 @@ fun main() {
     val availabilityList = mutableListOf(true)
     availabilityList.add(isAvailable)
 
-    println(" \n New Property Details: \n")
-    println("Property Name: $newPropertyName")
-    println("Property ID: $newPropertyId")
-    println("Number of Units : $newPropertyUnits")
-    println("Property Address: $newPropertyAddress")
-    println("Property Status: $newPropertyStatus")
-    println("Monthly Rent: $newPropertyMonthlyRent")
-    println("Available: $isAvailable")
+    println("\n----- All Listed Properties -----")
+    for (i in propertyNames.indices) {
+        println("\nProperty ${i + 1}:")
+        println("Name: ${propertyNames[i]}")
+        println("ID: ${propertyIds[i]}")
+        println("Units: ${numberOfUnits[i]}")
+        println("Address: ${propertyAddresses[i]}")
+        println("Status: ${propertyStatuses[i]}")
+        println("Monthly Rent: KES ${monthlyRent[i]}")
+        println("Available: ${availabilityList[i]}")
+    }
+
+
 
 
     println("\n----- Check Property Availability -----")
@@ -114,13 +109,7 @@ fun main() {
     }
 
 
-println(" \n New Property Details: \n")
-    println("Property Name: $newPropertyName")
-    println("Property ID: $newPropertyId")
-    println("Number of Units : $newPropertyUnits")
-    println("Property Address: $newPropertyAddress")
-    println("Property Status: $newPropertyStatus")
-    println("Monthly Rent: $newPropertyMonthlyRent")
+
 
 
 
