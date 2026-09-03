@@ -35,23 +35,25 @@ fun main() {
     //Property  Details
 
     println("\n Property info: \n")
-    val propertyName: String = "Sunrise Apartments"
-    val propertyId: Int = 3001
-    val numberOfUnits = 6
-    val propertyAddress: String = "Sun Road - 04506"
-    val propertyStatus = "Verified"
-    val currentTenants = 3
-    val monthlyRent: Int = 30000
+    val propertyNames = mutableListOf("Sunrise Apartments")
+    val propertyIds = mutableListOf (3001)
+    val numberOfUnits = mutableListOf (6)
+    val propertyAddresses = mutableListOf("Sun Road - 04506")
+    val propertyStatuses = mutableListOf("Verified")
+    val currentTenants = mutableListOf(3)
+    val monthlyRent = mutableListOf(30000)
+    var unitStatus = "Assigned"
 
 
 
-    println("Property Name: $propertyName")
-    println("Property ID: $propertyId")
+    println("Property Name: $propertyNames")
+    println("Property ID: $propertyIds")
     println("Number of Units : $numberOfUnits")
     println("Number of Tenants $currentTenants")
-    println("Property Address: $propertyAddress")
-    println("Property Status: $propertyStatus")
+    println("Property Address: $propertyAddresses")
+    println("Property Status: $propertyStatuses")
     println("Monthly Rent: $monthlyRent")
+    println("Unit Status: $unitStatus")
 
 
     //Registration of new property listings
@@ -70,6 +72,16 @@ fun main() {
     var newPropertyStatus = readln()
     println("Enter Property Monthly Rent:")
     var newPropertyMonthlyRent = readln().toInt()
+
+    propertyNames.add(newPropertyName)
+    propertyIds.add(newPropertyId)
+    numberOfUnits.add(newPropertyUnits)
+    currentTenants.add(numberOfTenants)
+    propertyAddresses.add(newPropertyAddress)
+    propertyStatuses.add(newPropertyStatus)
+    monthlyRent.add(newPropertyMonthlyRent)
+
+
 
 println(" \n New Property Details: \n")
     println("Property Name: $newPropertyName")
