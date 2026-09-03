@@ -1,9 +1,9 @@
-// Concept Note
-// 192789 Shali
-//200159  Juliet
-//175852 Kimberly
-//163034  Alvaros
-//189600 Elizabeth
+// Concept Note :
+// Group Members:
+// 200159 - Juliet Nyakiamo
+// 175852 - Lumumba Kimberly
+// 192789 - Salama Shali
+// 189600 - Gitacu Elizabeth
 
 
 
@@ -81,6 +81,37 @@ fun main() {
     propertyStatuses.add(newPropertyStatus)
     monthlyRent.add(newPropertyMonthlyRent)
 
+
+    println("Is the property available? (yes/no):")
+    val availabilityInput = readln()
+    val isAvailable: Boolean = availabilityInput.equals("yes", ignoreCase = true)
+
+    val availabilityList = mutableListOf(true)
+    availabilityList.add(isAvailable)
+
+    println(" \n New Property Details: \n")
+    println("Property Name: $newPropertyName")
+    println("Property ID: $newPropertyId")
+    println("Number of Units : $newPropertyUnits")
+    println("Property Address: $newPropertyAddress")
+    println("Property Status: $newPropertyStatus")
+    println("Monthly Rent: $newPropertyMonthlyRent")
+    println("Available: $isAvailable")
+
+
+    println("\n----- Check Property Availability -----")
+    println("Enter the Property Name you want to check:")
+    val searchName = readln()
+
+    val searchIndex = propertyNames.indexOf(searchName)
+
+    if (searchIndex == -1) {
+        println("Sorry, no property found with that name.")
+    } else if (availabilityList[searchIndex]) {
+        println("$searchName is currently AVAILABLE.")
+    } else {
+        println("$searchName is currently NOT available.")
+    }
 
 
 println(" \n New Property Details: \n")
