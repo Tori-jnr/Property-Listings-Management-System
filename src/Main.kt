@@ -69,7 +69,7 @@ fun main() {
         if (isRentPaidList) {
             println("Thank you for the early rent pay")
         } else {
-            println("please clear your balance $rentDueList - $amountPaidList")
+            println("please clear your balance {$rentDueList - $amountPaidList}")
         }
         println("Available Units: $availableUnits")
     }
